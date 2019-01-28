@@ -1,6 +1,6 @@
 # nodeCommands
 
-This repo illustrates the functionality of few node commands such as:
+This repo illustrates the functionality of few node commands:
  
     1. diff
     2. ls
