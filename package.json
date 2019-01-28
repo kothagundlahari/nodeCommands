@@ -1,0 +1,23 @@
+{
+  "name": "nodecommands",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kothagundlahari/nodeCommands.git"
+  },
+  "author": "hari",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kothagundlahari/nodeCommands/issues"
+  },
+  "homepage": "https://github.com/kothagundlahari/nodeCommands#readme",
+  "dependencies": {
+    "shelljs": "^0.8.3",
+    "text-file-diff": "^1.0.6"
+  }
+}
