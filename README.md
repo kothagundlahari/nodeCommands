@@ -14,7 +14,8 @@ This repo illustrates the functionality of few node commands such as:
     
     npm install 
     
-#diff 
+
+# diff 
 
     node testDiffCommands.js file.txt file1.txt 
 
