@@ -1,16 +1,16 @@
 // This is your Editor pane. Write your JavaScript here and 
 // use the command line to execute commands
-var shell = require('shelljs');
+import { which, echo, exit, cd, ls, sed, cat } from 'shelljs';
 
-if (!shell.which('git')) {
-    shell.echo('Sorry, this script requires git');
-    shell.exit(1);
+if (!which('git')) {
+    echo('Sorry, this script requires git');
+    exit(1);
 }
 
 
 // Replace macros in each .js file
-shell.cd('./files');
-shell.ls('*.js').forEach(function (file) {
-    shell.sed('-i', /^.*node.*$/, '', file);
-    shell.sed('-i', /.*express.*\n/, shell.cat('text.js'), file);
+cd('./files');
+ls('*.js').forEach(function (file) {
+    sed('-i', /^.*node.*$/, '', file);
+    sed('-i', /.*express.*\n/, cat('text.js'), file);
 });

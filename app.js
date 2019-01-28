@@ -1,11 +1,12 @@
-const EventEmitter = require('events');
+import EventEmitter from "events";
+
 const ReadlinesSync = require('n-readlines');
 
 /**
  * default line comparer
- * @param  String line1
- * @param  String line2
  * @return Number       0 for equals, 1 if line1 > line2 or -1
+ * @param line1
+ * @param line2
  */
 function defaultLineComparer(line1, line2) {
     line1 = String(line1).trim();
@@ -15,8 +16,8 @@ function defaultLineComparer(line1, line2) {
 
 /**
  * custom line reader for better control of file
- * @param  String file path of file
  * @return Object      custom linereader
+ * @param file
  */
 function myLineReader(file) {
     const rst = new ReadlinesSync(file);
@@ -44,8 +45,8 @@ function myLineReader(file) {
 class TextFileDiff extends EventEmitter {
     /**
      * initialize FileDiff
-     * @param  Object options the options option
      * @return Object         self
+     * @param options
      */
     constructor(options) {
         super();
@@ -55,9 +56,9 @@ class TextFileDiff extends EventEmitter {
 
     /**
      * run diff
-     * @param  String file1 path to file 1
-     * @param  String file2 path to file 2
      * @return Object         self
+     * @param file1
+     * @param file2
      */
     diff(file1, file2) {
         const lineReader1 = myLineReader(file1);
@@ -84,7 +85,15 @@ class TextFileDiff extends EventEmitter {
             if (cmp === 0) {
                 lineReader1.moveNext();
                 lineReader2.moveNext();
-            } else if (cmp > 0) {
+            } else if (cmp <= 0) {
+                if (cmp >= 0) {
+                    continue;
+                }
+                if (cmp === -1) {
+                    this.emit('-', line1, lineReader1, lineReader2);
+                }
+                lineReader1.moveNext();
+            } else {
                 // line1 > line2: new line detected
                 if (cmp === 1) {
                     this.emit('+', line2, lineReader1, lineReader2);
@@ -92,14 +101,6 @@ class TextFileDiff extends EventEmitter {
 
                 // incr File2 to next line
                 lineReader2.moveNext();
-            } else if (cmp < 0) {
-                // line1 < line2: deleted line
-                if (cmp === -1) {
-                    this.emit('-', line1, lineReader1, lineReader2);
-                }
-
-                // incr File1 to next line
-                lineReader1.moveNext();
             }
         }
 

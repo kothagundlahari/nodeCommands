@@ -1,8 +1,9 @@
-var shell = require('shelljs');
+import { which, echo, exit, find } from 'shelljs';
 
-if (!shell.which('git')) {
-    shell.echo('Sorry, this script requires git');
-    shell.exit(1);
+if (which('git')) {
+} else {
+    echo('Sorry, this script requires git');
+    exit(1);
 }
 
-shell.find('files/text.js').filter(function(file) { console.log(file); });
+find('files/text.js').filter(function(file) { console.log(file); });
