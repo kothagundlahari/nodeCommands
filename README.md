@@ -7,7 +7,7 @@ This repo illustrates the functionality of few node commands such as:
     3. find
     4. sed
 
-# Installation
+### Installation
 1. Clone or Download the repo. 
 2. Run npm install 
     
@@ -16,24 +16,26 @@ This repo illustrates the functionality of few node commands such as:
     npm install 
     
 
-# diff 
+### diff 
 
     babel-node testDiffCommands.js file.txt file1.txt 
 
     
-# ls
+### ls
 
      babel-node ls.js 
      
            
-# find
+### find
 
       babel-node find.js 
       
-# sed
+### sed
        babel-node sed.js 
   
 
-#Note
-babel-node is not the recommended approach to use in production. For production purposes transpile all your code into a specific folder then use those files in the node environment. 
+
+
+##Note:
+using babel-node is not the recommended approach to use in production. For production purposes one should transpile the code into a specific folder and then use those file to serve in the node environment.
 
