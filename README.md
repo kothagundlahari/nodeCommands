@@ -33,7 +33,7 @@ This repo illustrates the functionality of few node commands such as:
 # sed
        babel-node sed.js 
   
-#Note
 
+#Note
 babel-node is not the recommended approach to use in production. For production purposes transpile all your code into a specific folder then use those files in the node environment. 
 
