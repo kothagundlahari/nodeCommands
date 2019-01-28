@@ -4,7 +4,7 @@ This repo illustrates the functionality of few node commands such as:
  
     1. diff
     2. ls
-    3. ls
+    3. find
     4. sed
 
 # Installation
@@ -14,11 +14,20 @@ This repo illustrates the functionality of few node commands such as:
     
     npm install 
     
+#diff 
+
+    node testDiffCommands.js file.txt file1.txt 
+
+    
 # ls
 
      node ls.js 
      
-     
+           
+# find
 
-       
-#
+      node find.js 
+      
+# sed
+       node sed.js 
+  
