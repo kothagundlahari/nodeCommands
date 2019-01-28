@@ -9,7 +9,7 @@ This repo illustrates the functionality of few node commands:
 
 ### Installation
 1. Clone or Download the repo. 
-2. Run npm install
+2. Run the following commands
     
         npm install babel-cli -g 
         npm install 
@@ -33,5 +33,5 @@ This repo illustrates the functionality of few node commands:
 
 
 ### Note:
-Using babel-node is not the recommended approach to use in production. For production purposes one should transpile the code into a specific folder and then use those file to serve in the node environment.
+Using babel-node is not the recommended approach to use in production. For production purposes one should transpile the code into a specific folder and then use those file to serve into the node environment.
 
