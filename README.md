@@ -11,10 +11,9 @@ This repo illustrates the functionality of few node commands such as:
 1. Clone or Download the repo. 
 2. Run npm install 
     
-    
-        npm install babel-cli -g 
-        npm install 
-    
+
+    npm install babel-cli -g 
+    npm install
 
 ### diff 
 
@@ -34,6 +33,6 @@ This repo illustrates the functionality of few node commands such as:
        babel-node sed.js 
 
 
-## Note:
+### Note
 Using babel-node is not the recommended approach to use in production. For production purposes one should transpile the code into a specific folder and then use those file to serve in the node environment.
 
