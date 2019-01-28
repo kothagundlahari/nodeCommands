@@ -1,2 +1,6 @@
 node
-javaScript
+express
+JavaScript
+React
+ES6
+node
