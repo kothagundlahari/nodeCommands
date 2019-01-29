@@ -30,8 +30,14 @@ This repo illustrates the functionality of few node commands:
       
 ### sed
        babel-node sed.js 
-
+    
+ please check the file in 'files/text.js' before and after running "babel-node sed.js"
+ 
+ The contents in the 'files/text.js' will be changed to not contain "node".
+                                                              
 
 ### Note:
 Using babel-node is not the recommended approach to use in production. For production purposes one should transpile the code into a specific folder and then use those file to serve into the node environment.
+
+
 
