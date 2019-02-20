@@ -1,4 +1,4 @@
-import LargeFileDiff from './app.js';
+const LargeFileDiff = require('./app.js');
 
 const argv = process.argv;
 

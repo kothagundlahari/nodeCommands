@@ -31,11 +31,10 @@ This repo illustrates the functionality of few node commands:
 ### sed
        node sed.js 
     
- please check the file in 'files/text.js' before and after running "babel-node sed.js"
+ please check the file in 'files/text.js' before and after running "node sed.js"
  
  The contents in the 'files/text.js' will be changed to not contain "node".
                                                               
-
 
 
 
